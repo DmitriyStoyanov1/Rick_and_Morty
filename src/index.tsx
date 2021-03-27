@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+
 import { Box } from '@material-ui/core';
 import { Header } from './components';
 import {
@@ -13,7 +14,7 @@ import {
 import './index.css';
 
 ReactDOM.render(
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Box minHeight="100vh">
       <Header />
 
